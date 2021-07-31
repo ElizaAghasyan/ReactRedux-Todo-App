@@ -1,9 +1,11 @@
+import Button from '@material-ui/core/Button';
+import './projectPage.scss';
+
 const ProjectPage = () => {
     return (
         <div className="projectPage">
-            <h2 className="">Welcome to our Todo App</h2>
-            <p>Here you can create your first project</p>
-            <button>Create Project</button>
+            <h2 className="projectPage-title">You can create your projects' page here</h2>
+            <Button variant="outlined" className="btn">Create Project</Button>
         </div>
     );
 }

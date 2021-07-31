@@ -1,1 +1,28 @@
+.projectPage {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
 
+    &-title {
+        margin-bottom: 0;
+        font-size: 30px;
+        font-family: 'Cormorant Garamond', serif;
+        color: #8187ea;
+    }
+
+    .btn {
+        color: #8187ea;
+        width: 15%;
+        border: none;
+        background-color: #f3f4fc;
+        opacity: 0.7;
+        position: relative;
+        left: 43%;
+        margin-top: 40px;
+
+        &:hover {
+            opacity: 1
+        }
+    }
+}
