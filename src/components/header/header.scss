@@ -1,0 +1,27 @@
+.header{
+    height: 70px;
+    width: 100%;
+    background-color: #f3f4fc;
+    display: flex;
+    justify-content: center;
+
+    &-container {
+        width: 90%;
+        height: 70px;
+        display: flex;
+
+    &-logo {
+        width: 60px;
+        margin: 8px;
+    }
+
+    &-title {
+        font-family: 'Cormorant Garamond', serif;
+        position: absolute;
+        left: calc(50% - 70px);
+        color: #8187ea;
+        margin: 14px 0;
+    }
+
+    }
+}

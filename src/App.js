@@ -1,9 +1,13 @@
+import Header from './components/header/header';
+import Footer from './components/footer/footer';
+
 import './App.scss';
 
-function App() {
+const App = () =>  {
   return (
     <div className="App">
-
+      <Header />
+      <Footer />
     </div>
   );
 }
