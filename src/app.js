@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Header from './components/header/header';
-import Dialogue from './components/dialogue/dialogue';
+import ProjectPopup from './components/dialogue/projectPopup';
 import ProjectPage from './components/projectPage/projectPage';
 import Footer from './components/footer/footer';
 
@@ -14,7 +14,7 @@ const App = () =>  {
     return (
         <div className="App">
             <Header />
-            <Dialogue modal={modal} toggle={toggleModal} />
+            <ProjectPopup modal={modal} toggle={toggleModal} />
             <ProjectPage  toggle={toggleModal} />
             <Footer />
         </div>
