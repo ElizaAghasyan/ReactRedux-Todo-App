@@ -4,12 +4,23 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import { useDispatch } from 'react-redux';
+import { addTodo } from "../../redux/todoSlice";
 
 import './projectPopup.scss';
 
 const ProjectPopup = ({ modal, toggle }) => {
     const [title, setTitle ] = useState();
     const [description, setDescription ] = useState();
+    let dispatch = useDispatch();
+
+    const handleSave = () => {
+        dispatch(addTodo({
+            title: title,
+            description: description,
+        }));
+        toggle(!modal)
+    }
 
     return (
         <Dialog open={modal} onClose={toggle} className="dialogue">
@@ -36,6 +47,8 @@ const ProjectPopup = ({ modal, toggle }) => {
                 <Button
                     variant="outlined"
                     className="btn"
+                    style={{color: "#8187ea"}}
+                    onClick={handleSave}
                 >
                     Save
                 </Button>
