@@ -1,0 +1,41 @@
+.container {
+  margin: 50px 20px;
+  min-height: 100px;
+  width: 220px;
+  box-shadow: 1px 2px 20px #f3f4fc;
+  border-radius: 10px;
+  position: relative;
+
+
+  &-title {
+    font-family: 'Cormorant Garamond', sans-serif;
+    color: #8187ea;
+    padding: 10px;
+    font-size: 15px;
+    background-color: #f3f4fc;
+    height: 15px;
+  }
+
+  &-description {
+    font-family: 'Cormorant Garamond', sans-serif;
+    color: #8187ea;
+    padding: 0 10px;
+    margin: -10px 0;
+    overflow-wrap: anywhere;
+  }
+
+  &-remove {
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+  }
+
+  svg path {
+    fill: #8187ea;
+    opacity: 0.6;
+
+    &:hover {
+      opacity: 1
+    }
+  }
+}
