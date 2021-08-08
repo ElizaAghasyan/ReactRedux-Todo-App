@@ -16,8 +16,9 @@ const App = () =>  {
         <div className="App">
             <Header />
             <ProjectPopup modal={modal} toggle={toggleModal} />
-            <ProjectPage  toggle={toggleModal} />
-            <ProjectList />
+            <ProjectPage  toggle={toggleModal}>
+                <ProjectList />
+            </ProjectPage>
             <Footer />
         </div>
     );

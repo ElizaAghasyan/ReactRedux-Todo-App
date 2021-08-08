@@ -7,18 +7,35 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import { useDispatch } from 'react-redux';
 import { addTodo } from "../../redux/todoSlice";
 
+import { makeStyles } from '@material-ui/core/styles';
 import './projectPopup.scss';
+
+const useStyles = makeStyles({
+    root: {
+        color: "#8187ea",
+        border: "none",
+        backgroundColor: "#f3f4fc",
+        opacity: 0.7,
+
+        "&:hover" : {
+            opacity: 1
+        }
+    },
+});
 
 const ProjectPopup = ({ modal, toggle }) => {
     const [title, setTitle ] = useState();
     const [description, setDescription ] = useState();
-    let dispatch = useDispatch();
+    const dispatch = useDispatch();
+    const classes = useStyles();
 
     const handleSave = () => {
         dispatch(addTodo({
             title: title,
             description: description,
         }));
+        setTitle('');
+        setDescription('');
         toggle(!modal)
     }
 
@@ -46,16 +63,14 @@ const ProjectPopup = ({ modal, toggle }) => {
             <DialogActions>
                 <Button
                     variant="outlined"
-                    className="btn"
-                    style={{color: "#8187ea"}}
+                    className={classes.root}
                     onClick={handleSave}
                 >
                     Save
                 </Button>
                 <Button
                     variant="outlined"
-                    className="btn"
-                    style={{color: "#8187ea"}}
+                    className={classes.root}
                     onClick={toggle}
                 >
                     Cancel
