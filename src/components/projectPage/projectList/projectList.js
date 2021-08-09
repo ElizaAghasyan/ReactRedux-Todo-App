@@ -10,14 +10,12 @@ const ProjectList = () => {
         <div className="projectList-container">
             {todos.map((todo) => {
                 return (
-                    <div key={todo.id}>
-                        <ProjectItem
-                            key={todo.id}
-                            id={todo.id}
-                            title={todo.title}
-                            description={todo.description}
-                        />
-                    </div>
+                    <ProjectItem
+                        key={todo.id}
+                        id={todo.id}
+                        title={todo.title}
+                        description={todo.description}
+                    />
                 );
             })}
         </div>

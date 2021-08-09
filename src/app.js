@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import {useState} from 'react';
 import Header from './components/header/header';
 import ProjectPopup from './components/dialogue/projectPopup';
 import ProjectPage from './components/projectPage/projectPage';
 import Footer from './components/footer/footer';
-import ProjectList from './components/projectPage/projectList/projectList'
 
-const App = () =>  {
+const App = () => {
     const [modal, setModal] = useState(false);
 
     const toggleModal = () => {
@@ -16,9 +15,7 @@ const App = () =>  {
         <div className="App">
             <Header />
             <ProjectPopup modal={modal} toggle={toggleModal} />
-            <ProjectPage  toggle={toggleModal}>
-                <ProjectList />
-            </ProjectPage>
+            <ProjectPage toggle={toggleModal} />
             <Footer />
         </div>
     );
