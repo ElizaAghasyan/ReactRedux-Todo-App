@@ -6,7 +6,6 @@
   border-radius: 10px;
   position: relative;
 
-
   &-title {
     font-family: 'Cormorant Garamond', sans-serif;
     color: #8187ea;
@@ -14,6 +13,7 @@
     font-size: 15px;
     background-color: #f3f4fc;
     height: 15px;
+    margin: 0;
   }
 
   &-description {

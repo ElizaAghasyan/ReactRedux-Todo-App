@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
@@ -11,21 +11,21 @@ import { makeStyles } from '@material-ui/core/styles';
 import './projectPopup.scss';
 
 const useStyles = makeStyles({
-    root: {
+    btnUI: {
         color: "#8187ea",
         border: "none",
         backgroundColor: "#f3f4fc",
         opacity: 0.7,
 
-        "&:hover" : {
+        "&:hover": {
             opacity: 1
         }
     },
 });
 
-const ProjectPopup = ({ modal, toggle }) => {
-    const [title, setTitle ] = useState();
-    const [description, setDescription ] = useState();
+const ProjectPopup = ({modal, toggle}) => {
+    const [title, setTitle] = useState();
+    const [description, setDescription] = useState();
     const dispatch = useDispatch();
     const classes = useStyles();
 
@@ -43,7 +43,7 @@ const ProjectPopup = ({ modal, toggle }) => {
         <Dialog open={modal} onClose={toggle} className="dialogue">
             <DialogTitle className="dialogue-title">CREATE PROJECT</DialogTitle>
             <DialogContent>
-                <div className ="dialogue-form">
+                <div className="dialogue-form">
                     <label className="dialogue-form-label">PROJECT NAME</label>
                     <input
                         type="text"
@@ -51,10 +51,10 @@ const ProjectPopup = ({ modal, toggle }) => {
                         onChange={((e) => setTitle(e.target.value))}
                     />
                 </div>
-                <div className = "dialogue-form" >
+                <div className="dialogue-form">
                     <label className="dialogue-form-label">PROJECT DESCRIPTION</label>
                     <textarea
-                        rows = "5"
+                        rows="5"
                         className="dialogue-form-input"
                         onChange={(e) => setDescription(e.target.value)}
                     />
@@ -63,17 +63,17 @@ const ProjectPopup = ({ modal, toggle }) => {
             <DialogActions>
                 <Button
                     variant="outlined"
-                    className={classes.root}
+                    className={classes.btnUI}
                     onClick={handleSave}
                 >
-                    Save
+                    Cancel
                 </Button>
                 <Button
                     variant="outlined"
-                    className={classes.root}
+                    className={classes.btnUI}
                     onClick={toggle}
                 >
-                    Cancel
+                    Save
                 </Button>
             </DialogActions>
         </Dialog>

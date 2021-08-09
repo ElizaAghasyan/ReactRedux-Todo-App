@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { nanoid }  from 'nanoid';
+import { nanoid } from 'nanoid';
 
 const todoSlice = createSlice({
     name: "todos",
@@ -22,6 +22,6 @@ const todoSlice = createSlice({
     },
 });
 
-export const { addTodo, removeTodo } = todoSlice.actions;
+export const {addTodo, removeTodo} = todoSlice.actions;
 
 export default todoSlice.reducer;
