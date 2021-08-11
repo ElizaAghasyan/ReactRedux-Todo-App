@@ -65,7 +65,6 @@ const ProjectPopup = ({modal, toggle}) => {
                     variant="outlined"
                     className={classes.btnUI}
                     onClick={toggle}
-
                 >
                     Cancel
                 </Button>
