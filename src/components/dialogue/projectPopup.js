@@ -64,14 +64,15 @@ const ProjectPopup = ({modal, toggle}) => {
                 <Button
                     variant="outlined"
                     className={classes.btnUI}
-                    onClick={handleSave}
+                    onClick={toggle}
+
                 >
                     Cancel
                 </Button>
                 <Button
                     variant="outlined"
                     className={classes.btnUI}
-                    onClick={toggle}
+                    onClick={handleSave}
                 >
                     Save
                 </Button>
