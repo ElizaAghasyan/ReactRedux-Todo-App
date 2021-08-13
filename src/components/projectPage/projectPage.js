@@ -1,7 +1,13 @@
+import { Route, Switch, Link } from 'react-router-dom';
 import ProjectList from '../projectPage/projectList/projectList';
 
 import Button from '@material-ui/core/Button';
 import './projectPage.scss';
+
+const styleLink = {
+    textDecoration: 'none',
+    color: '#8187ea'
+}
 
 const ProjectPage = (props) => {
     return (
@@ -13,10 +19,15 @@ const ProjectPage = (props) => {
                     className="btn"
                     onClick={props.toggle}
                 >
-                    Create Project
+                    <Link to={`/projects`} style={styleLink}>
+                        Create Project
+                    </Link>
                 </Button>
             </div>
             <ProjectList />
+            <Switch>
+                <Route path="/project/:id" component={ProjectList} />
+            </Switch>
         </div>
     );
 }

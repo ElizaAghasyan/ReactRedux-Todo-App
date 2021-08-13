@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import Header from './components/header/header';
 import ProjectPopup from './components/dialogue/projectPopup';
 import ProjectPage from './components/projectPage/projectPage';
