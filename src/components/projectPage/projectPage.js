@@ -1,4 +1,4 @@
-import { Route, Switch, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import ProjectList from '../projectPage/projectList/projectList';
 
 import Button from '@material-ui/core/Button';
@@ -25,9 +25,6 @@ const ProjectPage = (props) => {
                 </Button>
             </div>
             <ProjectList />
-            <Switch>
-                <Route path="/project/:id" component={ProjectList} />
-            </Switch>
         </div>
     );
 }

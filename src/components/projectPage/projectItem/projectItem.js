@@ -1,15 +1,17 @@
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { removeTodo } from '../../../redux/todoSlice';
+import { useHistory } from 'react-router-dom';
 
 import './projectItem.scss';
 
 const styleLink = {
-    textDecoration: 'none'
+    textDecoration: 'none',
 }
 
 const ProjectItem = (props) => {
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const handleRemove = () => {
         dispatch(removeTodo({
@@ -17,8 +19,15 @@ const ProjectItem = (props) => {
         }))
     }
 
+    const handleHistoryChange = () => {
+        history.replace(`/projects/${props.id}`);
+    }
+
     return (
-        <Link to={`/projects/${props.id}`} style={styleLink}>
+        <Link to={`/projects/${props.id}`}
+              style={styleLink}
+              onClick={handleHistoryChange}
+        >
             <div className="container">
                 <h2 className="container-title">
                     {props.title}
