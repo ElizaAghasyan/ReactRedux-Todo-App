@@ -26,6 +26,9 @@
       background-color: #f3f4fc;
       border: none;
       color: #8187ea;
+      width: 91%;
+      padding: 7px;
+      font-family: Roboto sans-serif;
 
       &:focus {
         outline: 2px solid #8187ea;
@@ -34,7 +37,7 @@
 
     textarea {
       resize: none;
-      width: 100%;
+      width: 91%;
     }
   }
 }

@@ -15,12 +15,16 @@ const useStyles = makeStyles({
         color: "#8187ea",
         border: "none",
         backgroundColor: "#f3f4fc",
+        width: "40%",
         opacity: 0.7,
 
         "&:hover": {
             opacity: 1
         }
     },
+    dialogDisplay: {
+        marginRight: "17px",
+    }
 });
 
 const ProjectPopup = ({modal, toggle}) => {
@@ -60,7 +64,7 @@ const ProjectPopup = ({modal, toggle}) => {
                     />
                 </div>
             </DialogContent>
-            <DialogActions>
+            <DialogActions className={classes.dialogDisplay}>
                 <Button
                     variant="outlined"
                     className={classes.btnUI}
